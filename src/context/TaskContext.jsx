@@ -36,10 +36,10 @@ const taskReducer = (state, action) => {
   }
 };
 
-// Crear contexto
+
 const TaskContext = createContext();
 
-// Proveedor de contexto
+
 export const TaskProvider = ({ children }) => {
   const [state, dispatch] = useReducer(taskReducer, initialState);
 
@@ -50,7 +50,6 @@ export const TaskProvider = ({ children }) => {
   );
 };
 
-// Hook personalizado para usar el contexto
 export const useTaskContext = () => {
   const context = useContext(TaskContext);
   if (!context) {

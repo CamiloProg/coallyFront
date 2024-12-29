@@ -1,8 +1,7 @@
 // App.js
 import React from "react";
-import { TaskProvider } from "./context/TaskContext"; // Asegúrate de que la ruta sea correcta
-import { Home } from "./pages/Home"; // La ruta al componente Home
-
+import { TaskProvider } from "./context/TaskContext"; 
+import { Home } from "./pages/Home"; 
 function App() {
   return (
     <TaskProvider>

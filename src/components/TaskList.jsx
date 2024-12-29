@@ -119,7 +119,9 @@ export const TaskList = ({ tasks, onUpdate, onDelete, onEdit }) => {
                 e.stopPropagation();
                 handleToggleCompletion(task);
               }}
-              className='p-2 text-green-500 transition-transform duration-300 transform hover:scale-110'
+              className={`${
+                task.completed ? "text-green-500" : "text-orange-400"
+              } transition-transform duration-300 transform hover:scale-110`}
             >
               {task.completed
                 ? "Marcar como pendiente"
